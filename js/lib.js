@@ -1,0 +1,10 @@
+﻿﻿﻿<!DOCTYPE htmt>
+<html lang = "vi">
+	<head>
+		<title>Thiết kế web với html, css</title>
+		<meta charset = "utf-8">
+	</head>
+	<body>
+		
+	</body>
+</html>
