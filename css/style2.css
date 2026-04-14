@@ -20,8 +20,8 @@ form#frmLogin{
 h3.title{
     text-transform: uppercase;
     font-weight: bolder;
-    letter-spacing: 3px;
-    font-size: larger;
+    letter-spacing: 2px;
+    font-size: xx-large;
     text-align: center;
 }
 div.form-group{
