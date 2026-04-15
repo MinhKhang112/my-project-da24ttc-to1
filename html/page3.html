@@ -1,0 +1,57 @@
+<!DOCTYPE htmt>
+<html lang = "vi">
+	<head>
+		<title>Thiết kế form</title>
+		<meta charset = "utf-8">
+		<link rel = "stylesheet" href = "../css/style3.css">
+	</head>
+	<body>
+        <div class="container">
+            <form id="frmLogin">
+                <h3 class="title">ĐĂNG NHẬP</h3>
+                <div class="form-group">
+                    <label for ="txtName">Họ và tên</label>
+                    <input class="form-control" type="text" id="txtName" name="Name">
+                </div>
+                <div class="form-group">
+                    <label for ="txtMSSV">Mã số sinh viên</label>
+                    <input class="form-control" type="number" id="txtMSSV" name="txtMSSV">
+                </div>
+                <div class="form-group">
+                    <label for="Lop">Lớp</label>
+                    <select id="Lop" name="Lop">
+                        <option value="DA24TTC">DA24TTC</option>
+                        <option value="DA24TTA">DA24TTA</option>
+                        <option value="DA24TTD">DA24TTD</option>
+                        <option value="DA24TTB">DA24TTB</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for ="txtGT">Giới tính</label>
+                    <input type="radio" id="rdNam" name="rdGioitinh" value="Nam">
+                    <label for="rdNam">Nam</label>
+                    <input type="radio" id="rdNu" name="rdGioitinh" value="Nữ">
+                    <label for="rdNu">Nữ</label>
+                </div>
+                <div class="form-group">
+                    <label for ="txtDob">Ngày sinh</label>
+                    <input class="form-control" type="date" id="txtDob" name="txtDob">
+                </div>
+                <div class="form-group">
+                    <label for ="txtStrength">Điểm mạnh</label>
+                    <textarea class="form-control" type="text" id="txtStrength" row="4" name="txtStrength"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for ="txtEmail">Email</label>
+                    <input class="form-control" type="email" id="txtEmail" name="txtEmail">
+                </div>
+                <div class="form-group">
+                    <label>Hình ảnh</label>
+                    <input class="form-control" type="file" name="Hinhanh">
+                </div>
+                <input class="button" type="submit" name="sbLogin" value="Đăng nhập">
+                <input class="button" type="reset" name="rsRe-enter" value="Nhập lại">
+            </form>
+        </div>
+    </body>
+</html>

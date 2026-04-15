@@ -1,0 +1,92 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    background-color:white;
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    height: 100vh;       
+}
+.container{
+    width: 400px;
+    margin: 50px auto;
+}
+form{
+    background-color: white;
+    padding: 20px 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px cornflowerblue;
+}
+.title{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+.form-group{
+    margin-bottom: 5px;
+}
+textarea.form-control{
+    height: 100px;
+    resize: none; /* không cho kéo */
+}
+label{
+    margin-bottom: 5px;
+    font-size: 17px;
+    color:darkgoldenrod;
+    color:red;
+    font-weight: bolder;
+}
+.form-control{
+    width: 100%;
+    padding: 8px;
+    border: 1px solid white;
+    border-radius: 5px;
+    outline: none; 
+    display: block;
+    width: 100%;
+    padding: 3px;
+}
+.form-control:focus{
+    border-color: rgb(77, 77, 223);
+}
+button:hover{
+    background-color: blue;
+}
+div.container{
+    background-color:white;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 30px;
+    border-radius: 5px;
+}
+form#frmLogin{
+    background-color:beige;
+    padding: 20px;
+    border-radius: 5px;
+}
+h3.title{
+    text-transform: uppercase;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    font-size: xxx-large;
+    text-align: center;
+}
+div.form-group{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.button{
+    background-color: firebrick;
+    color: chartreuse;
+    font-weight: bolder;
+    padding: 5px;
+    border-radius: 2px;
+    border: none;
+    cursor: pointer;
+}
