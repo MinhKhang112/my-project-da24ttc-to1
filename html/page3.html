@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang = "vi">
 	<head>
 		<title>Form Đăng nhập</title>
@@ -20,6 +20,7 @@
                 <div class="form-group">
                     <label for="Lop">Lớp</label>
                     <select id="Lop" name="Lop">
+			            <option valua="--Chonlop--">--Chonlop--</option>
                         <option value="DA24TTC">DA24TTC</option>
                         <option value="DA24TTA">DA24TTA</option>
                         <option value="DA24TTD">DA24TTD</option>
@@ -38,12 +39,12 @@
                     <input class="form-control" type="date" id="txtDob" name="txtDob">
                 </div>
                 <div class="form-group">
-                    <label for ="txtStrength">Điểm mạnh</label>
-                    <textarea class="form-control" type="text" id="txtStrength" row="4" name="txtStrength"></textarea>
-                </div>
-                <div class="form-group">
                     <label for ="txtEmail">Email</label>
                     <input class="form-control" type="email" id="txtEmail" name="txtEmail">
+                </div>
+		<div class="form-group">
+                    <label for ="txtStrength">Điểm mạnh</label>
+                    <textarea class="form-control" type="text" id="txtStrength" row="4" name="txtStrength"></textarea>
                 </div>
                 <div class="form-group">
                     <label>Hình ảnh</label>
