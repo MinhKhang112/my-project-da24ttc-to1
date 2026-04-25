@@ -6,14 +6,18 @@
 		<link rel = "stylesheet" href = "../css/style5.css">
 	</head>
     <body>
-        <h2>In bảng cửu chương</h2>
-        <form id = "frmInBangCC" onsubmit="return inBang()">
+        <div class="container">
+            <h2>In bảng cửu chương</h2>
+            <form id = "frmInBangCC" onsubmit="return inBang()">
             <label for = "so">Nhập Số</label>
-            <input type = "number" id = "so" required>
-            <button type = "submit" onclick="functionIBCC">In</button>
-        </form>
-        <div id = "ketqua"></div>
-        <script>
+            <div class="input-group">
+                <input type = "number" id = "so" required>
+                <button type = "submit">In</button>
+            </div>
+            </form>
+            <div id = "ketqua"></div>
+        </div>
+            <script>
                 function inBang() {
                 const myfrm = document.forms["frmInBangCC"];
                 const mytextfield = myfrm.elements[0];
@@ -26,6 +30,6 @@
                 document.getElementById("ketqua").innerHTML = ketqua;
                 return false;
                 }
-        </script>
+            </script>       
     </body>
 </html>

@@ -21,25 +21,25 @@
                 <td>A</td>
                 <td class="sl">3</td>
                 <td class="dg">1000</td>
-                <td class="tt"></td>
+                <td class="tt">?</td>
             </tr>
             <tr>
                 <td>2</td>
                 <td>B</td>
                 <td class="sl">2</td>
                 <td class="dg">2000</td>
-                <td class="tt"></td>
+                <td class="tt">/</td>
             </tr>
             <tr>
                 <td>3</td>
                 <td>C</td>
                 <td class="sl">4</td>
                 <td class="dg">3000</td>
-                <td class="tt"></td>
+                <td class="tt">?</td>
             </tr>
             <tr>
                 <td colspan="3">Tổng thanh toán</td>
-                <td colspan="2" id="tongthanhToan"></td>
+                <td colspan="2" id="tongthanhToan">?</td>
             </tr>
         </table>
         </div>
@@ -50,6 +50,9 @@
             let tongthanhToan=0;
             for(let i=0; i < donGia.length; i++)
             {
+                let sl = parseInt(soLuong[i].innerHTML);
+                let dg = parseInt(donGia[i].innerHTML);
+                let tt = sl * dg;
                 thanhTien[i].innerHTML = soLuong[i].innerHTML * donGia[i].innerHTML;
                 tongthanhToan += parseInt(thanhTien[i].innerHTML);
             }
