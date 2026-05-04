@@ -6,7 +6,10 @@
 		<link rel = "stylesheet" href = "../css/style6.css">
 	</head>
     <body>
+        <h1 class="title">🚗 SHOWROOM BÁN XE</h1>
+        <div class="list-product"></div>
         <script>
+        function addProduct(name, priceText, imageSrc, link){
             //Tạo thẻ div
             const newDiv = document.createElement("div");
             newDiv.setAttribute("class","product-item");
@@ -15,7 +18,7 @@
             productImage.setAttribute("class","product-image");
             //Tạo ảnh
             const productImageNode = document.createElement("img");
-            productImageNode.setAttribute("src", "../assets/images/xe civic.jpg");
+            productImageNode.setAttribute("src", imageSrc);
             //Gắn ảnh vào productImage
             productImage.appendChild(productImageNode);
             //tạo div Info
@@ -23,14 +26,14 @@
             productInfo.setAttribute("class","product-info");
             //Tên xe
             const title = document.createElement("p");
-            title.appendChild(document.createTextNode("Xe Civic"));
+            title.textContent = name;
             //Tạo price
             const price = document.createElement("p");
-            price.appendChild(document.createTextNode("2.400.000.000"));
+            price.textContent = priceText;
             //Tạo Link
             const detail = document.createElement("a");
-            detail.setAttribute("href","https://hondaotodongthap.com.vn/san-pham/honda-civic-type-r/");
-            detail.innerHTML = "Xem chi tiết";
+            detail.setAttribute("href", link);
+            detail.innerText = "Xem chi tiết";
             //Gắn vào productInfo
             productInfo.appendChild(title);
             productInfo.appendChild(price);
@@ -39,7 +42,13 @@
             newDiv.appendChild(productImage);
             newDiv.appendChild(productInfo);
             //Gán vào body   
-            document.body.appendChild(newDiv); 
+            document.querySelector(".list-product").appendChild(newDiv); 
+        }
+        //Gọi thử
+        addProduct("Xe Civic", "2.400.000.000", "../assets/images/xe civic.jpg", "https://hondaotodongthap.com.vn/san-pham/honda-civic-type-r/");
+        addProduct("Xe BMW", "6.000.000.000", "../assets/images/xe bmw.jpg", "https://bmw-hanoi.com.vn/san-pham/bmw-8-series-gran-coupe/");
+        addProduct("Xe Mercedes", "2.220.000.000" , "../assets/images/xe mercedes.jpg", "https://giaxemercedes.vn/gia-xe-mercedes/");
+        addProduct("Xe Vinfast", "1.000.000.000", "../assets/images/xe vinfast.jpg", "https://giaxeoto.vn/xe-sedan-vinfast-lux-a2-0-373.html");
         </script>
     </body>
 </html>
