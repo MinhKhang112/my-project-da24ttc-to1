@@ -64,3 +64,33 @@ function addProduct(id, name, price, image, hyperLink)
 	//Gắn product item vào product list
 	document.getElementById("product-list").appendChild(productItem);
 }
+
+function showProduct(products)
+{
+	const container = document.getElementById('product-list');
+
+	container.innerHTML = "";
+
+	products.forEach(item => {
+		//Tạo element cha bằng createElement
+		const productItem = document.createElement('div');
+		productItem.className = 'product-item col-md-3 col-sm-6';
+		//productItem.setAttribute("class", "product-item col-md-3 col-sm-6");
+		//Sử dụng Template Literal nạp dữ liệu vào 
+		productItem.innerHTML = `
+			<div class="product-image ratio ratio-1x1 overflow-hidden">
+				<img src="${item.image}" alt="${item.name}" class="img-fluid object-fit-cover">
+			</div>
+			<div class="product-info p-2 text-center">
+				<p class="product-name mb-1">${item.name}</p>
+				<p class="product-price text-danger fw-bold mb-2">
+					${item.price.toLocaleString('vi-VN')}
+				</p>
+				<a href="${item.productLink}" class="btn btn-sm btn-outline-primary w-100">
+					Xem chi tiết
+				</a>
+			</div>
+		`;
+		container.appendChild(productItem);
+	});
+}
