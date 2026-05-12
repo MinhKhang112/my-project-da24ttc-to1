@@ -10,19 +10,25 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
         <meta charset = "utf-8">
         <script src="../js/lib.js"></script>
+        <script src="../html/detail.html"></script>
 	</head>
     <body>
         <div class="container">
-            <div class="product-list row row-cols-2 row-cols-md-4 row-cols-lg-5 g-3" id="product-list">
-
-            </div>
+            <h2 class="text-center mb-4">DANH SÁCH MÓN ĂN VẶT</h2>
+        <!-- Khung chứa danh sách -->
+        <div class="product-list row row-cols-2 row-cols-md-4 row-cols-lg-5 g-3" id="product-list">
+            <!-- Dữ liệu sẽ tự đổ vào đây nhờ JS -->
         </div>
+        </div>
+
         <script>
-            productList.forEach(function(item) {
-                 //Truyền từng thuộc tính vào hàm
-                addProduct(item.id, item.name, item.price, item.image, item.productLink);
-            });
-            showProduct(productList);
+            // Gọi hàm để hiển thị sản phẩm lên màn hình
+            // Hãy chắc chắn trong file lib.js bạn đã có mảng productList và hàm showProduct
+            if (typeof productList !== 'undefined' && typeof showProduct === 'function') {
+                showProduct(productList);
+            } else {
+                console.error("Không tìm thấy dữ liệu hoặc hàm hiển thị trong lib.js");
+            }
         </script>
     </body>
 </html>

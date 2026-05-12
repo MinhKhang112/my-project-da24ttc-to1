@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Chi tiết sản phẩm</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="../js/lib.js"></script>
+        <script>
+            const productList = [
+                {
+                    id: "1",
+                    name: "Bánh tráng phơi sương",
+                    price: 30000,
+                    image: "../assets/images/banh-trang-phoi-suong.jpg",
+                    productLink:
+                    "https://dacsantayninh.info/san-pham/banh-trang-phoi-suong/?srsltid=AfmBOoov--sNLCA78SMqNxgRfjdAsxBHM7vo4hbG2Lcg8HhKn8uJ1B0B",
+                    desc: "Bánh tráng phơi sương là một trong những đặc sản nổi tiếng của Tây Ninh, được nhiều người yêu thích bởi hương vị dẻo mềm và thơm ngon đặc trưng. Sản phẩm được làm từ bột gạo nguyên chất, sau đó đem phơi nắng và hấp sương vào ban đêm để tạo nên độ mềm tự nhiên. Khi thưởng thức, bánh có vị thơm nhẹ của gạo, dễ cuốn cùng rau sống, thịt luộc hoặc dùng để chế biến nhiều món ăn hấp dẫn khác. Với quy trình sản xuất truyền thống kết hợp cùng nguồn nguyên liệu sạch, bánh tráng phơi sương luôn giữ được chất lượng ổn định và an toàn cho người dùng. Đây không chỉ là món ăn quen thuộc trong bữa cơm gia đình mà còn là lựa chọn thích hợp để làm quà biếu cho bạn bè và người thân."
+                },
+
+                {
+                    id: "2",
+                    name: "Cơm cháy chà bông",
+                    price: 40000,
+                    image: "../assets/images/com-chay-cha-bong.jpg",
+                    productLink:
+                    "https://comchayxua.vn/products/com-chay-cha-bong-195-g",
+                    desc: "Cơm cháy chà bông là món ăn vặt thơm ngon được nhiều người yêu thích nhờ hương vị giòn tan kết hợp cùng lớp chà bông đậm đà. Phần cơm cháy được chế biến từ gạo ngon, chiên vàng đều để tạo độ giòn hấp dẫn mà không bị quá cứng. Khi ăn, người dùng sẽ cảm nhận được vị béo nhẹ của cơm cháy hòa quyện cùng vị mặn ngọt đặc trưng của chà bông và nước sốt đậm vị. Sản phẩm phù hợp để dùng trong các buổi họp mặt bạn bè, xem phim hoặc mang theo khi đi du lịch. Ngoài hương vị hấp dẫn, cơm cháy chà bông còn được đóng gói tiện lợi, dễ bảo quản và sử dụng. Đây là món ăn vừa quen thuộc vừa hiện đại, thích hợp với nhiều độ tuổi khác nhau và luôn mang đến cảm giác ngon miệng khi thưởng thức."
+                },
+
+                {
+                    id: "3",
+                    name: "Khô gà lá chanh",
+                    price: 100000,
+                    image: "../assets/images/kho-ga-la-chanh.jpg",
+                    productLink:
+                    "https://traicaysaynutfarm.com/san-pham/kho-g",
+                    desc: "Khô gà lá chanh là món ăn vặt được yêu thích nhờ hương vị cay ngọt hài hòa cùng mùi thơm đặc trưng của lá chanh. Thịt gà được chọn lọc kỹ lưỡng, luộc chín rồi xé sợi trước khi tẩm ướp gia vị và sấy khô để giữ được độ dai mềm tự nhiên. Khi thưởng thức, người dùng sẽ cảm nhận rõ vị đậm đà của thịt gà kết hợp cùng vị cay nhẹ của ớt và hương thơm dễ chịu từ lá chanh. Sản phẩm thích hợp dùng làm món ăn nhẹ trong các buổi tụ tập, học tập hoặc làm việc. Ngoài ra, khô gà còn được đóng gói tiện lợi giúp dễ dàng mang theo khi đi chơi hoặc du lịch. Với hương vị hấp dẫn và cách chế biến an toàn, khô gà lá chanh luôn là lựa chọn quen thuộc của nhiều bạn trẻ hiện nay."
+                },
+
+                {
+                    id: "4",
+                    name: "Mực hấp nước dừa",
+                    price: 70000,
+                    image: "../assets/images/muc-hap-nuoc-dua.jpg",
+                    productLink:
+                    "https://gocbansi.com/product/muc-hap-nuoc-dua-gia-si-300g/",
+                    desc: "Mực hấp nước dừa là món ăn đặc sản hấp dẫn với hương vị đậm đà và thơm ngon tự nhiên từ hải sản tươi sống. Mực được tuyển chọn kỹ càng, làm sạch rồi hấp cùng nước dừa tươi để giữ được độ dai giòn và vị ngọt tự nhiên của thịt mực. Sau quá trình chế biến, sản phẩm có màu sắc đẹp mắt cùng mùi thơm nhẹ của dừa hòa quyện với hương vị biển đặc trưng. Khi ăn, người dùng có thể chấm cùng tương ớt hoặc dùng kèm rau sống để tăng thêm hương vị. Đây là món ăn thích hợp trong các buổi tụ họp gia đình, nhậu nhẹt hoặc dùng làm quà biếu cho người thân. Với cách đóng gói tiện lợi và dễ bảo quản, mực hấp nước dừa ngày càng trở thành lựa chọn phổ biến của nhiều người yêu thích hải sản khô."
+                },
+
+                {
+                    id: "5",
+                    name: "Rong biển cháy tỏi",
+                    price: 59000,
+                    image: "../assets/images/rong-bien-chay-toi.jpg",
+                    productLink:
+                    "https://www.dacsanbanhpia.com/rong-bien-chay-toi-me-hieu-mua-an-hop-150gr.html",
+                    desc: "Rong biển cháy tỏi là món ăn vặt thơm ngon kết hợp giữa vị giòn nhẹ của rong biển và hương thơm hấp dẫn của tỏi phi. Sản phẩm được chế biến từ rong biển chất lượng cao, sau đó rang cùng tỏi và các loại gia vị để tạo nên hương vị đậm đà khó quên. Khi thưởng thức, người dùng sẽ cảm nhận được độ giòn tan cùng vị mặn ngọt hài hòa, phù hợp với khẩu vị của nhiều người. Rong biển cháy tỏi có thể dùng trực tiếp hoặc ăn kèm cơm nóng để tăng thêm sự ngon miệng. Ngoài hương vị hấp dẫn, sản phẩm còn được nhiều người yêu thích nhờ sự tiện lợi và dễ bảo quản. Đây là món ăn thích hợp cho học sinh, sinh viên hoặc dân văn phòng cần một món ăn nhẹ thơm ngon trong ngày."
+                },
+
+                {
+                    id: "6",
+                    name: "Da heo mắm hành",
+                    price: 50000,
+                    image: "../assets/images/da-heo-mam-hanh.jpg",
+                    productLink:
+                    "https://www.tastyfood.com.vn/products/da-heo-mam-hanh-tasty-food-1",
+                    desc: "Da heo mắm hành là món ăn vặt hấp dẫn với vị giòn rụm kết hợp cùng nước mắm đậm đà và hành phi thơm lừng. Sản phẩm được làm từ da heo sạch, chế biến kỹ lưỡng để tạo độ giòn ngon mà không gây cảm giác ngấy khi ăn. Lớp gia vị mắm hành được phủ đều giúp món ăn có hương vị mặn ngọt hài hòa và kích thích vị giác. Đây là món ăn phù hợp trong các buổi tụ tập bạn bè, xem phim hoặc dùng làm món nhâm nhi mỗi ngày. Ngoài ra, sản phẩm còn được đóng gói cẩn thận để giữ được độ giòn và chất lượng trong thời gian dài. Với hương vị độc đáo cùng cách chế biến hấp dẫn, da heo mắm hành đang trở thành món ăn được nhiều người trẻ yêu thích hiện nay."
+                },
+
+                {
+                    id: "7",
+                    name: "Đậu phộng tỏi ớt",
+                    price: 13000,
+                    image: "../assets/images/dau-phong-toi-ot.jpg",
+                    productLink:
+                    "https://www.bachhoaxanh.com/cac-loai-hat/dau-phong-vi-toi-ot-pinattsu-oishi-goi-85g",
+                    desc: "Đậu phộng tỏi ớt là món ăn vặt dân dã nhưng luôn được nhiều người yêu thích nhờ hương vị thơm ngon và dễ ăn. Đậu phộng được rang chín vàng đều, sau đó trộn cùng tỏi phi và ớt để tạo nên vị cay nhẹ hấp dẫn. Khi thưởng thức, người dùng sẽ cảm nhận được độ giòn bùi của hạt đậu kết hợp với mùi thơm đặc trưng của tỏi và vị cay vừa phải từ ớt. Sản phẩm thích hợp dùng làm món ăn nhẹ, ăn kèm khi trò chuyện cùng bạn bè hoặc sử dụng trong các buổi dã ngoại. Với mức giá hợp lý và cách đóng gói tiện lợi, đậu phộng tỏi ớt phù hợp với nhiều đối tượng khác nhau. Đây là món ăn đơn giản nhưng luôn mang đến cảm giác ngon miệng và thú vị khi thưởng thức."
+                },
+
+                {
+                    id: "8",
+                    name: "Khoai tây chiên giòn",
+                    price: 65000,
+                    image: "../assets/images/khoai-tay-chien-gion.jpg",
+                    productLink:
+                    "https://haisandathanh.com/san-pham/khoai-tay-chien-97.html",
+                    desc: "Khoai tây chiên giòn là món ăn vặt quen thuộc được nhiều người yêu thích bởi hương vị thơm ngon và độ giòn hấp dẫn. Khoai tây được cắt lát đều, chiên vàng bằng công nghệ hiện đại để giữ được độ giòn lâu mà không bị ngấy dầu. Khi ăn, người dùng sẽ cảm nhận được vị béo nhẹ tự nhiên của khoai kết hợp cùng lớp gia vị vừa ăn tạo nên hương vị khó cưỡng. Sản phẩm phù hợp để dùng trong các buổi xem phim, picnic hoặc làm món ăn nhẹ mỗi ngày. Ngoài ra, khoai tây chiên giòn còn được đóng gói tiện lợi giúp dễ dàng mang theo và bảo quản. Với hương vị thơm ngon cùng chất lượng ổn định, đây là món ăn được cả trẻ em lẫn người lớn yêu thích và lựa chọn thường xuyên."
+                },
+
+                {
+                    id: "9",
+                    name: "Hạt điều rang muối",
+                    price: 80000,
+                    image: "../assets/images/hat-dieu-rang-muoi.jpg",
+                    productLink:
+                    "https://devafood.vn/hat-dieu-rang-muoi-230g/?srsltid=AfmBOoqxTMuuWWx6E0rpD3WGWr3iTWKq1z0L7uj8Erf13Ow4hK2Qy0_z",
+                    desc: "Hạt điều rang muối là món ăn dinh dưỡng được nhiều người yêu thích nhờ vị béo bùi tự nhiên và hương thơm hấp dẫn. Hạt điều được tuyển chọn kỹ lưỡng, rang cùng muối theo phương pháp truyền thống để giữ được độ giòn và hương vị đặc trưng. Khi thưởng thức, người dùng sẽ cảm nhận được vị ngọt nhẹ của hạt điều hòa quyện cùng vị mặn vừa phải tạo nên cảm giác ngon miệng. Sản phẩm thích hợp dùng làm món ăn nhẹ, quà tặng hoặc sử dụng trong các buổi gặp mặt gia đình và bạn bè. Ngoài hương vị thơm ngon, hạt điều còn chứa nhiều dưỡng chất có lợi cho sức khỏe. Với cách đóng gói cẩn thận và tiện lợi, hạt điều rang muối luôn là lựa chọn phổ biến của nhiều người hiện nay."
+                },
+
+                {
+                    id: "10",
+                    name: "Bánh tráng trộn",
+                    price: 30000,
+                    image: "../assets/images/banh-trang-tron.jpg",
+                    productLink:
+                    "https://banhtrangmuoi.vn/products/banh-trang-tron-truyen-thong",
+                    desc: "Bánh tráng trộn là món ăn vặt nổi tiếng của giới trẻ với hương vị chua cay mặn ngọt vô cùng hấp dẫn. Sản phẩm được làm từ bánh tráng cắt sợi kết hợp cùng nhiều nguyên liệu như khô bò, đậu phộng, hành phi, rau răm và nước sốt đặc trưng. Khi thưởng thức, người dùng sẽ cảm nhận được sự hòa quyện của nhiều hương vị khác nhau tạo nên cảm giác ngon miệng và thú vị. Đây là món ăn phù hợp cho các buổi tụ tập bạn bè, ăn vặt sau giờ học hoặc dùng trong những chuyến đi chơi. Ngoài hương vị thơm ngon, bánh tráng trộn còn được đóng gói tiện lợi giúp dễ dàng mang theo và sử dụng. Với sự phổ biến và hấp dẫn của mình, món ăn này luôn được nhiều bạn trẻ yêu thích và lựa chọn thường xuyên."
+                }
+                ];
+
+        </script>
+    </head>
+    <body class="bg-light">
+        <div class="container my-5" style="max-width: 900px;">
+        <div class="mb-4">
+            <a href="detail.html" class="btn btn-outline-secondary btn-sm">Xem chi tiết</a>
+        </div>
+        <!--Khung chứa nội dung chi tiết sản phẩm-->
+        <div class="card shadow-sm p-4 bg-white">
+            <div class="row g-4 align-items-start">
+                <!--Cột bên trái: Ảnh sản phẩm(Chiếm 5/12 cột trên màn hình lớn)-->
+                <div class="col-md-5">
+                    <img id="p-image" src="DU_LIEU_SAN_PHAM" alt="Tên sản phẩm" class="img-fluid rounded border">
+                </div>
+                <!--Cột bên phải: Thông tin sản phẩm (Chiếm 7/12 cột trên màn hình lớn)-->
+                <div class="col-md-7">
+                    <!--Tên sản phẩm-->
+                    <h1 id="p-name" class="h2 fw-bold text-dark mb-3">TÊN SẢN PHẨM CỦA BẠN</h1>
+                    <!--Gía sản phẩm-->
+                    <h2 id="p-price" class="h4 text-danger fw-semibold mb-4">Giá: </h2>
+                    
+                    <hr>
+
+                    <h3 class="h6 fw-bold text-secondary text-uppercase mb-2">Mô tả sản phẩm</h3>
+                    <!--Mô tả sản phẩm: Canh đều (text-justify). giãn dòng 1.5 (lh-base)-->
+                    <p id="p-description" class="text-muted lh-base" style="text-align: justify;">
+                        Nội dung mô tả của bạn từ 150-200 từ sẽ được chèn vào đây
+                        Đoạn văn này sử dụng class lh-base của Bootstrap 5 để tự động giãn dòng 1.5 line
+                        và thuộc tính text-align: justify của CSS để căn đều cả hai là trái phải,
+                        giúp bố cục văn bản trông gọn gàng, chuyên nghiệp và dễ đọc hơn trên mọi thiết bị 
+                    </p>
+                </div>
+            </div>
+        </div>
+        </div>
+        <script>
+            //1. Lấy ID từ URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = urlParams.get('id');
+
+            //2. Dùng find để tìm đối tượng. Cần ép kiểu productId và Number bằng Number() hoặc dấu +
+            const product = productList.find(item => item.id === productId);
+
+            //3. Truy xuất các trường dữ liệu khi đối tượng tồn tại
+            if (product){
+                document.getElementById("p-image").src = product.image;
+                document.getElementById("p-name").innerText = product.name;
+                document.getElementById("p-price").innerText = "Giá bán lẻ: " + (product.price).toLocaleString() + "VNĐ";
+                document.getElementById("p-description").innerText = product.desc;
+            } else{
+                console.log("Không tìm tháy sản phẩm với ID: ", productId);
+                document.body.innerHTML = "<div class='container my-5'><h3>Không tìm thấy sản phẩm!</h3><a href ='index.html'>Quay lại</a></div>";
+            }
+        </script>
+    </body>
+</html>
